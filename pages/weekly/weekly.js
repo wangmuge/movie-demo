@@ -50,8 +50,8 @@ Page({
       "thisWeek[4].name":"新名字"
     })
   },
-  f2:function(e){
-
+  f2:function(event){
+console.log(event.currentTarget)
     wx.navigateTo({
       url: '/pages/details/details',
     })

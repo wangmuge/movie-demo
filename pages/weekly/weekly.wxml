@@ -16,10 +16,11 @@
 </swiper> -->
 <swiper indicator-dots="{{true}}" class="movie-swiper" previous-margin="50rpx" next-margin="50rpx" current="{{currentIndex}}">
 <swiper-item class="movie-card" wx:for="{{thisWeek}}">
-<view class="container" bindtap="f2">
+<view class="container" bindtap="f2" data-movie-id="{{item.id}}">
 <image class="movie-image" src="{{item.imagePath}}"></image>
 <!-- <view class="movie-details"> -->
 <text>第{{index+1}}周推荐</text>
+<text>id:{{item.id}}</text>
 <text >{{item.name}}</text>
 <text >{{item.comment}}</text>
 <text>点击数：{{count+score}}</text>
