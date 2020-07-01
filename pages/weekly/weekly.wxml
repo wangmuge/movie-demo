@@ -1,0 +1,35 @@
+<view >
+<!-- <text>本周推荐</text> -->
+<!-- <swiper style="background:#eee;hegiht:300px">
+<swiper-item>
+<text>111</text>
+<image src="/image/111.png"></image>
+</swiper-item>
+<swiper-item>
+<text>222</text>
+<image src="/image/222.png"></image>
+</swiper-item>
+<swiper-item>
+<text>333</text>
+<image src="/image/333.png"></image>
+</swiper-item>
+</swiper> -->
+<swiper indicator-dots="{{true}}" class="movie-swiper" previous-margin="50rpx" next-margin="50rpx" current="{{currentIndex}}">
+<swiper-item class="movie-card" wx:for="{{thisWeek}}">
+<view class="container" bindtap="f2">
+<image class="movie-image" src="{{item.imagePath}}"></image>
+<!-- <view class="movie-details"> -->
+<text>第{{index+1}}周推荐</text>
+<text >{{item.name}}</text>
+<text >{{item.comment}}</text>
+<text>点击数：{{count+score}}</text>
+<text>评分：{{(score>=60)?"及格":"不及格"}}</text>
+<text wx:if="{{item.ishight}}" style="font-size:16px;color:red;">强烈推荐</text>
+<text class="return" wx:if="{{index < (thisWeek.length - 1)}}" bindtap="f0">返回本周</text>
+<!-- </view> -->
+</view>
+</swiper-item>
+</swiper>
+<!-- <text>{{count}}</text> -->
+<button bindtap="f1">修改名字</button>
+</view>

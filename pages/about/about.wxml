@@ -1,0 +1,10 @@
+<view class="container">
+<image class="banner" src="/image/A7.jpg"></image>
+<text style='font-weight:bold;font-size:60rpx;'>电影周周看</text>
+<view>
+<text>我</text>
+<navigator style='display:inline;' url="/pages/weekly/weekly" open-type="switchTab" hover-class="hover" class="hover-defult">每周推荐</navigator>
+<text>一部好片子</text>
+</view>
+<text >我的weibo/Teamu</text>
+</view>

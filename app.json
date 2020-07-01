@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/weekly/weekly",
+    "pages/about/about",
+    "pages/index/index",
+
+    "pages/details/details",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [
+      {
+      "pagePath": "pages/weekly/weekly",
+      "text": "每周推荐",
+      "iconPath": "image/index.png",
+      "selectedIconPath": "image/index2.png"},
+    {
+    "pagePath": "pages/about/about",
+    "text": "关于",
+    "iconPath": "image/me1.png",
+    "selectedIconPath": "image/me2.png"}
+  ],
+"selectedColor": "#000000"
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "电影连连看",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
