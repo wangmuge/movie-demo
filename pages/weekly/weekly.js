@@ -5,31 +5,31 @@ Page({
       comment:"最精彩的演员阵容。",
       imagePath:"/image/111.png",
       ishight:true,
-      id:1
+      id:12918416
     },{
       name:"胖子传说",
       comment:"最精彩的演员阵容。最精彩的演技。",
       imagePath:"/image/222.png",
       ishight:true,
-      id:2
+      id:1291845
     },{
       name:"帅哥传说",
       comment:"最精彩的演员阵容。",
       imagePath:"/image/333.png",
       ishight:false,
-      id:3
+      id:1291842
     },{
       name:"胖子传说2",
       comment:"最精彩的演员阵容。",
       imagePath:"/image/111.png",
       ishight:true,
-      id:4
+      id:1291843
     },{
       name:"胖子传说3",
       comment:"最精彩的演员阵容。",
       imagePath:"/image/222.png",
       ishight:false,
-      id:5
+      id:1291841
     }],
     count:123,
     score:60,
@@ -51,9 +51,16 @@ Page({
     })
   },
   f2:function(event){
+    var movieId = event.currentTarget.dataset.movieId
 console.log(event.currentTarget)
     wx.navigateTo({
-      url: '/pages/details/details',
+      url: '/pages/details/details?id='+movieId
     })
-  }
+  },
+  onShareAppMessage:function(){
+    return{
+      title:"每周推荐"
+    }
+
+  }//分享页面
 })
