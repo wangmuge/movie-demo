@@ -1,0 +1,10 @@
+/* components/title/MyTitle.wxss */
+.my_title{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+  background-color: white;
+}
+.logo{
+  flex:3;
+}

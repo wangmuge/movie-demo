@@ -1,8 +1,10 @@
 {
   "pages":[
+    "pages/bilibi/bilibi",
     "pages/weekly/weekly",
     "pages/about/about",
     "pages/index/index",
+
 
     "pages/details/details",
     "pages/logs/logs"
@@ -14,6 +16,11 @@
       "text": "每周推荐",
       "iconPath": "image/index.png",
       "selectedIconPath": "image/index2.png"},
+      {
+        "pagePath": "pages/bilibi/bilibi",
+        "text": "bilibi",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index2.png"},
     {
     "pagePath": "pages/about/about",
     "text": "关于",
