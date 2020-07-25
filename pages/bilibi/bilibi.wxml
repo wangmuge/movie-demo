@@ -1,3 +1,27 @@
 <view class="main">
 <MyTitle></MyTitle>
+<view class="nav_warp">
+<scroll-view class="nav" scroll-x>
+<view bindtap="activeNav" data-index="{{index}}" class="nav_item {{index===currentIndexNav?'active':''}}" wx:for="{{navList}}" wx:key="index" >
+{{item.text}}
+</view>
+</scroll-view>
+</view>
+<view class="slides">
+<swiper autoplay indicator-dots circular>
+<swiper-item wx:for="{{swiperList}}" wx:key="index">
+<navigator>
+<image mode="widthFix" src="{{item.imgSrc}}"></image>
+</navigator>
+</swiper-item>
+</swiper>
+</view>
+<view class="viedo_wrap">
+<navigator class="viedo_item" wx:for="{{videoList}}" wx:key="index">
+<view class="video_img">
+<image src="{{item.imgSrc}}" />
+</view>
+<view class="video_title">{{item.desc}}</view>
+</navigator>
+</view>
 </view>
