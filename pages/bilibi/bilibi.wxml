@@ -16,10 +16,18 @@
 </swiper-item>
 </swiper>
 </view>
-<view class="viedo_wrap">
-<navigator class="viedo_item" wx:for="{{videoList}}" wx:key="index">
+<view class="video_wrap">
+<navigator class="video_item" wx:for="{{videoList}}" wx:key="index" url="../detail/detail?id={{item.id}}">
 <view class="video_img">
-<image src="{{item.imgSrc}}" />
+<image src="{{item.imgSrc}}" mode="widthFix"  />
+<view class="video_info"> 
+<view class="play_count_wrap">
+<text class="play_count">播放量：{{item.playCount}}</text>
+</view>
+<view class="comment_count_row">
+<text class="comment_count">评论量：{{item.commentCount}}</text>
+</view>
+</view>
 </view>
 <view class="video_title">{{item.desc}}</view>
 </navigator>

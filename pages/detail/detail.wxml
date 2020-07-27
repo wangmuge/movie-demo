@@ -1,0 +1,56 @@
+<view class="main">
+    <MyTitle></MyTitle>
+    <view class="video_info" hover-class="none" hover-stop-propagation="false">
+        <video src="{{videoInfo.videoSrc}}" controls></video>
+        <view class="video_title" hover-class="none" hover-stop-propagation="false">
+            <text>{{videoInfo.videoTitle}}</text>
+        </view>
+        <view class="video_detail" hover-class="none" hover-stop-propagation="false">
+            <text class="author">{{videoInfo.author}}</text>
+            <text class="play_count">{{videoInfo.playCount}}播放</text>
+            <text class="comment_count">{{videoInfo.commentCount}}弹幕</text>
+            <text class="date">{{videoInfo.date}}</text>
+        </view>
+    </view>
+    <view class="other_list" >
+        <navigator class="item_other" wx:for="{{otherList}}" wx:key="index" >
+            <view class="other_img_wrap" >
+                <image src="{{item.imgSrc}}" mode="widthFix" />
+            </view>
+            <view class="other_info" >
+                <view class="other_title" >{{item.title}}</view>
+                <view class="other_detail">
+                    <text class="play_count"  >
+                        {{item.playMsg}}次观看
+                    </text>
+                    <text class="comment_count" >
+                        {{item.commentCount}}
+                    </text>
+                </view>
+            </view>
+        </navigator>
+    </view>
+    <view class="comment_wrap" hover-class="none" hover-stop-propagation="false">
+        <view class="comment_title">
+            评论({{commentData.commentTotalCount}})
+        </view>
+        <view class="comment_list">
+            <view class="comment_item" wx:for="{{commentData.commentList}}" wx:key="{{index}}">
+                <view class="comment_user" >
+                    <image src="/image/111.png" mode="" />
+                </view>
+                <view class="comment_info" >
+                    <view class="comment_detail" >
+                        <text class="author">{{item.username}}</text>
+                        <text class="data">{{item.commentDate}}</text>
+                    </view>
+                    <view class="comment_content" >
+                        {{item.commentInfo}}
+                    </view>
+                </view>
+
+
+            </view>
+        </view>
+    </view>
+</view>

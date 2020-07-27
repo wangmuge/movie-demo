@@ -4,9 +4,8 @@
     "pages/weekly/weekly",
     "pages/about/about",
     "pages/index/index",
-
-
     "pages/details/details",
+    "pages/detail/detail",
     "pages/logs/logs"
   ],
   "tabBar": {
